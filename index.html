@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+  </head>
+  <style type="text/css">
+    body {
+      font-family: "Lato", sans-serif;
+      padding: 5px;
+    }
+    a.no-decoration {
+      text-decoration: none;
+    }
+    .vertical-sub {
+      vertical-align: sub;
+    }
+    .vertical-middle {
+      vertical-align: middle;
+    }
+    .container-wrap {
+      max-width: 600px !important;
+    }
+    .container-wrap .container {
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      background: white;
+    }
+    .header {
+      margin: 0px;
+    }
+    .header .logo-container {
+      margin: 0 auto;
+      text-align: center;
+      width: 100% !important;
+    }
+    .header .logo-container .logo-img {
+      display: inline-block;
+    }
+    .header .logo-container td {
+      padding: 40px 0 20px;
+    }
+    .content {
+      color: #1a2734;
+      line-height: 22px;
+    }
+    .content .content-wrapper {
+      padding-bottom: 36px;
+    }
+    .content-wrapper .booking-info-table {
+      border-bottom: 2px solid #e9ebee;
+      padding-bottom: 24px;
+    }
+    .content-wrapper .content-name {
+      padding-bottom: 24px;
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 1.25;
+      letter-spacing: normal;
+    }
+    .content-wrapper .content-booking {
+      padding-bottom: 6px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .content-wrapper .content-booking-note {
+      line-height: 1.43;
+      color: #898989;
+    }
+
+    .order-info .order-table {
+      padding: 0 20px 36px;
+      border-bottom: 2px solid #e9ebee;
+    }
+    .order-info .order-image {
+      width: 33%;
+      vertical-align: top;
+      padding-right: 16px;
+    }
+    .order-info .order-image img {
+      display: block;
+      width: 100%;
+      min-height: 80px;
+      max-height: 128px;
+      object-fit: cover;
+    }
+    .order-info .order-content {
+      vertical-align: top;
+    }
+    .order-info .order-title {
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    .order-info .order-rating-container {
+      padding: 5px 0;
+    }
+    .order-info .order-rating-container img {
+      vertical-align: middle;
+    }
+    .order-info .order-address,
+    .order-info .order-phone {
+      line-height: 1.5;
+      font-size: 12px;
+    }
+    .order-info .order-address a {
+      text-decoration: none;
+    }
+    .order-info .order-location {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.33;
+      color: #f97432;
+      white-space: nowrap;
+    }
+    .order-info .order-caret {
+      font-size: 18px;
+      line-height: 15px;
+      vertical-align: text-bottom;
+    }
+
+    .content-lock {
+      line-height: 1.5;
+    }
+    .content-lock .content-lockbody {
+      background: #f8f8f8;
+      font-size: 18px;
+    }
+    .content-lock .content-lockbody .content-lockmessage {
+      font-weight: 700;
+      padding-top: 10px;
+    }
+    .content-lock .content-lockbody .content-lockinstruction {
+      padding-bottom: 10px;
+    }
+
+    .detail-info {
+      padding-bottom: 7px;
+    }
+    .detail-info .detail-table {
+      padding-bottom: 36px;
+      border-bottom: 2px solid #e9ebee;
+    }
+    .detail-info .detail-table .detail-wrapper {
+      font-size: 14px;
+      line-height: 2;
+      padding: 10px 20px 24px;
+    }
+    .detail-table .detail-content {
+      font-size: 16px;
+    }
+    .detail-table .detail-content .detail-title {
+      padding: 14px 0;
+      color: #233445;
+      font-weight: 700;
+    }
+    .detail-table .detail-row {
+      width: 33%;
+      vertical-align: top;
+      color: #898989;
+      padding-top: 10px;
+      padding-right: 10px;
+      line-height: 1.5;
+    }
+    .detail-table .detail-row-content {
+      color: #000000;
+      padding-top: 10px;
+      line-height: normal;
+      vertical-align: top;
+    }
+    .detail-table .detail-row-content:not(.info) {
+      line-height: 1.5;
+    }
+    .detail-table .detail-row-content.info {
+      color: #898989;
+      padding-top: 8px;
+    }
+    .detail-button {
+      padding: 24px 20px 0;
+    }
+    .detail-button .detail-buttonlink {
+      color: white;
+      text-decoration: none;
+    }
+    .detail-button .detail-buttonlink .detail-buttonclick {
+      background: #f97432;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      padding: 8px 6px 8px 12px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    .plan-info {
+      padding-bottom: 16px;
+    }
+    .plan-info .plan-table {
+      border-bottom: 2px solid #e9ebee;
+      padding-bottom: 15px;
+      line-height: 2;
+    }
+    .plan-info .plan-table .plan-wrapper {
+      font-size: 12px;
+    }
+    .plan-content {
+      background: #f1f1f1;
+      color: #3d4d5d;
+      border-radius: 4px;
+      padding: 10px 20px 20px;
+    }
+
+    .additional-table {
+      padding-top: 24px;
+      padding-bottom: 36px;
+      border-bottom: 2px solid #e9ebee;
+    }
+    .additional-table .additional-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a2734;
+      line-height: normal;
+      padding-bottom: 16px;
+    }
+    .additional-table .additional-subtitle {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a2734;
+      line-height: 18px;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    .additional-table .additional-content {
+      font-size: 14px;
+      font-weight: 400;
+      color: #4d4d4d;
+      line-height: 18px;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+
+    .help-info {
+      border-bottom: 2px solid #e9ebee;
+      padding-bottom: 16px;
+    }
+    .help-info .help-table {
+      font-size: 14px;
+      line-height: 1.8;
+      padding-top: 24px;
+    }
+    .help-info .help-table .help-title {
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .help-info .help-table .help-content {
+      padding-bottom: 7px;
+      color: #3d4d5d;
+    }
+    .help-info .help-table .help-support {
+      padding-bottom: 3px;
+    }
+    .help-info .help-table .help-phone {
+      text-align: right;
+      padding-right: 5%;
+      white-space: nowrap;
+      word-break: break-all;
+    }
+    .help-info .help-table .help-contact {
+      color: #f97432 !important;
+      font-weight: 700;
+    }
+    .help-info .help-table .help-mail {
+      text-align: left;
+      padding-left: 5%;
+      white-space: nowrap;
+      word-break: break-all;
+    }
+    .help-info .help-table img.vertical-middle {
+      width: 18px;
+    }
+    .footer {
+      border-bottom: 2px solid #e9ebee;
+    }
+    .footer .footer-table {
+      color: #8996a3;
+    }
+    .footer-table .footer-wrapper {
+      padding: 45px 0 60px;
+      border-spacing: 0;
+      margin: 0 auto;
+    }
+    .footer-table .footer-wrapper .footer-content {
+      padding: 0 0 0 10px;
+    }
+    .footer-download {
+      text-align: left;
+    }
+    .footer-download .footer-downloadtitle {
+      padding: 7px 0;
+      color: #1a2734;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .footer-download .footer-downloadtitle .footer-downloadname {
+      color: #f97432;
+    }
+    .footer-download .footer-downloadshare {
+      padding-bottom: 7px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #8996a3;
+    }
+    .footer-download .footer-download-gplay {
+      padding-right: 7.5px;
+    }
+    .confirmation-email {
+      line-height: 1.33;
+      font-size: 12px;
+    }
+    .confirmation-email a {
+      color: #8996a3;
+    }
+    .tnc {
+      padding-top: 6px;
+      display: block;
+      text-decoration: underline !important;
+    }
+    .copyright {
+      padding: 20px 0px 9px;
+      color: #8996a3;
+      font-size: 12px;
+    }
+    .social-media {
+      padding: 10px 0;
+    }
+    .social-media a {
+      text-decoration: none;
+      color: #333333;
+    }
+    .social-media a img {
+      width: 15px;
+    }
+    .dedi {
+      color: red;
+    }
+    .haha {
+      background: yellow;
+    }
+  </style>
+  <body style="margin: 0px">
+    <table width="100%" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <div class="dedi">lala</div>
+          <div class="haha">wow</div>
+
+          <!--[if mso]>
+        <table width="600" align="center" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <![endif]-->
+
+          <table
+            class="container-wrap"
+            align="center"
+            cellspacing="0"
+            cellpadding="0"
+          >
+            <tr>
+              <td>
+                <table
+                  class="container"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                >
+                  <tr class="header">
+                    <td>
+                      <table
+                        class="logo-container"
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td align="center" class="logo-img">
+                            <img
+                              width="165"
+                              src="http://asset.pegipegi.com/image/inbox/pegipegi-logo.png"
+                            />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table
+                        class="content"
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td>
+                            <table width="100%" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td class="content-wrapper">
+                                  <table
+                                    width="100%"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                    class="booking-info-table"
+                                  >
+                                    <tr>
+                                      <td class="content-name" align="center">
+                                        Hai, Miranda<br />
+                                        E-Voucher hotel Anda sudah terbit.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        class="content-booking"
+                                        align="center"
+                                      >
+                                        Nomor Pesanan: <b>12345678</b><br />
+                                        Confirmation Number:
+                                        <b>ABC12457987456176</b>
+                                      </td>
+                                    </tr>
+                                    <tr
+                                      class="content-booking-note"
+                                      align="center"
+                                    >
+                                      <td>Booked and payable by Pegipegi</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td class="order-info">
+                                  <table
+                                    width="100%"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                    class="order-table"
+                                  >
+                                    <tr>
+                                      <td class="order-image">
+                                        <img
+                                          src="https://originpre.pegipegi.com/jalan/images/pict1L/Y3/Y171723/Y171723001.jpg"
+                                          alt=""
+                                          width="100%"
+                                        />
+                                      </td>
+
+                                      <td class="order-content">
+                                        <table cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td class="order-title">
+                                              <b
+                                                >CLOVE GARDEN HOTEL &
+                                                RESIDENCES</b
+                                              >
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td class="order-rating-container">
+                                              <img
+                                                src="https://asset.pegipegi.com/image/inbox/star-icon.png"
+                                                alt="Star"
+                                                width="16"
+                                              />
+                                              <img
+                                                src="https://asset.pegipegi.com/image/inbox/star-icon.png"
+                                                alt="Star"
+                                                width="16"
+                                              />
+                                              <img
+                                                src="https://asset.pegipegi.com/image/inbox/star-icon.png"
+                                                alt="Star"
+                                                width="16"
+                                              />
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td class="order-address">
+                                              Jl. Awiligar Raya II No. 2,
+                                              Cibeunying, Cimenyan, Kab.
+                                              Bandung, <br /><a
+                                                class="no-decoration"
+                                                >Jawa Barat, Indonesia.</a
+                                              >
+                                              <a
+                                                href="https://goo.gl/maps/ZT7mNDYr9ja7GSAr6"
+                                                target="_blank"
+                                                ><span class="order-location"
+                                                  >Lihat lokasi
+                                                  <span class="order-caret"
+                                                    >&#x203A;</span
+                                                  ></span
+                                                ></a
+                                              >
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td class="order-phone">
+                                              No. Telepon : 022 8007654
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td
+                                  class="detail-info"
+                                  width="100%"
+                                  align="center"
+                                >
+                                  <table
+                                    class="detail-table"
+                                    width="100%"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                  >
+                                    <tr>
+                                      <td>
+                                        <table
+                                          width="100%"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                        >
+                                          <tr>
+                                            <td>
+                                              <table
+                                                class="detail-wrapper"
+                                                width="100%"
+                                                cellspacing="0"
+                                                cellpadding="0"
+                                              >
+                                                <tr
+                                                  class="detail-content"
+                                                  align="center"
+                                                >
+                                                  <td
+                                                    colspan="2"
+                                                    class="detail-title"
+                                                  >
+                                                    Pesanan Anda
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Nama tamu
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Indra Basuki
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Check-in
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Jum, 15 Nov 2019 mulai pukul
+                                                    14:00 (waktu setempat)<br />
+                                                    <span
+                                                      class="detail-row-content info"
+                                                      >Harap informasikan ke
+                                                      pihak hotel jika Anda
+                                                      terlambat check-in untuk
+                                                      menghindari
+                                                      pembatalan</span
+                                                    >
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Check-out
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Sab, 16 Nov 2019 sebelum
+                                                    pukul 12:00 (waktu setempat)
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Jumlah kamar
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    1 kamar
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Jumlah malam
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    1 malam
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td colspan="2">
+                                              <table
+                                                class="plan-content"
+                                                width="100%"
+                                                cellspacing="0"
+                                                cellpadding="0"
+                                              >
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Tipe kamar
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Deluxe Twin Bed - Promo
+                                                    Bebas Pegipegi
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Nama plan
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Regular Plan
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Detail plan
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Regular Plan - Plan Regular
+                                                    dengan bonus berupa tiket
+                                                    nonton Lion King di XXI
+                                                    Paris van Java Mall
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Kapasitas
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    2 tamu per kamar
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Sarapan
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Termasuk
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Permintaan khusus
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Kamar dengan connecting
+                                                    door, lantai tinggi,
+                                                    pemandangan laut, ada kulkas
+                                                    dan bebas merokok<br />
+                                                    <span
+                                                      class="detail-row-content info"
+                                                      >Hubungi hotel untuk
+                                                      memastikan permintaan
+                                                      khusus. Kami tidak dapat
+                                                      memastikan permintaan
+                                                      dipenuhi oleh pihak
+                                                      hotel.</span
+                                                    >
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="detail-row">
+                                                    Kebijakan pembatalan
+                                                  </td>
+                                                  <td
+                                                    class="detail-row-content"
+                                                  >
+                                                    Refundable <br />
+                                                    <span
+                                                      class="detail-row-content info"
+                                                      >Anda dapat membatalkan
+                                                      secara gratis sampai 2
+                                                      hari sebelum kedatangan.
+                                                      Anda dikenakan biaya malam
+                                                      pertama jika Anda
+                                                      membatalkan dalam 2 hari
+                                                      sebelum kedatangan.</span
+                                                    >
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td
+                                              colspan="2"
+                                              class="detail-button"
+                                              align="center"
+                                            >
+                                              <!-- === NEED TO CHANGE LINK IN THE COMMENTED <v>, IT IS USED AS A BUTTON REPLACEMENT IN OUTLOOK CONDITIONALLY === -->
+
+                                              <div>
+                                                <!--[if mso]>
+                                                  <v:roundrect
+                                                    xmlns:v="urn:schemas-microsoft-com:vml"
+                                                    xmlns:w="urn:schemas-microsoft-com:office:word"
+                                                    href="#"
+                                                    style="
+                                                      v-text-anchor: middle;
+                                                    "
+                                                    arcsize="0%"
+                                                    strokecolor="#f97432"
+                                                    fillcolor="#f97432"
+                                                    style="
+                                                      width: 220px;
+                                                      height: 45px;
+                                                    "
+                                                  >
+                                                    <w:anchorlock />
+                                                    <center
+                                                      style="
+                                                        color: #ffffff;
+                                                        font-size: 14px;
+                                                        font-weight: bold;
+                                                      "
+                                                    >
+                                                      Lihat pesanan saya &#8250;
+                                                    </center>
+                                                  </v:roundrect> <!
+                                                [endif]--><a
+                                                  href="#"
+                                                  target="_blank"
+                                                  style="mso-hide: all"
+                                                  class="detail-buttonlink"
+                                                >
+                                                  <button
+                                                    class="detail-buttonclick"
+                                                  >
+                                                    Lihat pesanan saya
+                                                    <img
+                                                      class="vertical-middle"
+                                                      width="16"
+                                                      src="http://asset.pegipegi.com/image/inbox/chevron-right.png"
+                                                    />
+                                                  </button>
+                                                </a>
+                                              </div>
+
+                                              <!-- === NEED TO CHANGE LINK IN THE COMMENTED <v>, IT IS USED AS A BUTTON REPLACEMENT IN OUTLOOK CONDITIONALLY === -->
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>
+                                  <table
+                                    class="additional-table"
+                                    width="100%"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                  >
+                                    <tr>
+                                      <td
+                                        align="center"
+                                        class="additional-title"
+                                      >
+                                        Informasi Tambahan
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <h5 class="additional-subtitle">
+                                          Hotel Policy
+                                        </h5>
+                                        <p class="additional-content">
+                                          Sewaktu check-in diperlukan tanda
+                                          pengenal dengan foto yang resmi
+                                          dikeluarkan oleh pemerintah dan kartu
+                                          kredit atau deposit tunai untuk
+                                          menutup biaya tak terduga. Pemenuhan
+                                          permintaan khusus bergantung pada
+                                          ketersediaan sewaktu check-in dan
+                                          mungkin menimbulkan biaya tambahan.
+                                          Permintaan khusus tidak dijamin akan
+                                          terpenuhi. Biaya penambahan orang
+                                          dalam kamar mungkin berlaku dan
+                                          berbeda-beda menurut kebijakan hotel.
+                                        </p>
+
+                                        <h5 class="additional-subtitle">
+                                          Check-in Instruction
+                                        </h5>
+                                        <p class="additional-content">
+                                          Sewaktu check-in diperlukan tanda
+                                          pengenal dengan foto yang resmi
+                                          dikeluarkan oleh pemerintah dan kartu
+                                          kredit atau deposit tunai untuk
+                                          menutup biaya tak terduga. Pemenuhan
+                                          permintaan khusus bergantung pada
+                                          ketersediaan sewaktu check-in dan
+                                          mungkin menimbulkan biaya tambahan.
+                                          Permintaan khusus tidak dijamin akan
+                                          terpenuhi. Biaya penambahan orang
+                                          dalam kamar mungkin berlaku dan
+                                          berbeda-beda menurut kebijakan hotel.
+                                        </p>
+
+                                        <h5 class="additional-subtitle">
+                                          Biaya berikut sudah termasuk dalam
+                                          total biaya kamar:
+                                        </h5>
+                                        <p class="additional-content">
+                                          Biaya pesta Malam Tahun Baru Kami
+                                          telah mencantumkan semua biaya yang
+                                          diinformasikan oleh properti kepada
+                                          kami. Namun, biaya mungkin berbeda,
+                                          misalnya, tergantung pada lama
+                                          menginap atau kamar yang dipesan.
+                                        </p>
+                                        <p class="additional-content">
+                                          Biaya dan deposit berikut mungkin
+                                          ditagihkan oleh properti saat
+                                          memberikan layanan, check-in, atau
+                                          check-out.
+                                        </p>
+                                        <p class="additional-content">
+                                          Biaya antar jemput bandara: USD 30.00
+                                          per kendaraan (satu arah) Daftar di
+                                          atas mungkin tidak lengkap. Biaya dan
+                                          deposit mungkin belum mencakup pajak
+                                          dan dapat berubah tanpa pemberitahuan
+                                          sebelumnya.
+                                        </p>
+
+                                        <h5 class="additional-subtitle">
+                                          Kebijakan Pembatalan
+                                        </h5>
+                                        <p class="additional-content">
+                                          Tamu dapat membatalkan reservasi
+                                          melalui sistem reservasi hotel atau
+                                          dengan meng-klik Modification Request
+                                          di Email reservasi yang dikirimkan di
+                                          Email tamu.
+                                        </p>
+
+                                        <h5 class="additional-subtitle">
+                                          Optional Services & Special Note
+                                        </h5>
+                                        <p class="additional-content">
+                                          Kami menyediakan layanan penitipan
+                                          anak dengan pemesanan terlebih dahulu.
+                                          Pelayanan penitipan anak merupakan
+                                          layanan berbayar. Silahkan memesan
+                                          layanan ini saat reservasi.
+                                        </p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td class="help-info">
+                                  <table
+                                    class="help-table"
+                                    align="center"
+                                    width="100%"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                  >
+                                    <tr>
+                                      <td
+                                        colspan="3"
+                                        class="help-title"
+                                        align="center"
+                                      >
+                                        Perlu Bantuan?
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        colspan="3"
+                                        class="help-content"
+                                        align="center"
+                                      >
+                                        Sebutkan nomor pesanan Anda:
+                                        <strong>12345678</strong><br />
+                                        Hubungi kami:
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        colspan="3"
+                                        class="help-support"
+                                        align="center"
+                                      >
+                                        <table cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td>
+                                              <img
+                                                class="vertical-middle"
+                                                src="http://asset.pegipegi.com/image/inbox/24-hour.png"
+                                                width="18"
+                                              />
+                                            </td>
+                                            <td>
+                                              &nbsp;<strong
+                                                >24-Hour Customer
+                                                Support</strong
+                                              >
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="help-phone">
+                                        <table
+                                          align="right"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                        >
+                                          <tr>
+                                            <td>
+                                              <img
+                                                class="vertical-middle"
+                                                src="http://asset.pegipegi.com/image/inbox/phone.png"
+                                                width="18"
+                                              />
+                                            </td>
+                                            <td>
+                                              &nbsp;<a
+                                                class="help-contact"
+                                                href="tel:08041400777"
+                                                target="_blank"
+                                                ><font color="#f97432"
+                                                  >0804 1400 777</font
+                                                ></a
+                                              >
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                      <td class="help-mail">
+                                        <table
+                                          align="left"
+                                          cellspacing="0"
+                                          cellpadding="0"
+                                        >
+                                          <tr>
+                                            <td>
+                                              <img
+                                                class="vertical-middle"
+                                                src="http://asset.pegipegi.com/image/inbox/mail.png"
+                                                width="18"
+                                              />
+                                            </td>
+                                            <td>
+                                              &nbsp;<a
+                                                class="help-contact"
+                                                href="mailto:cs@pegipegi.com"
+                                                target="_blank"
+                                                ><font color="#f97432"
+                                                  >cs@pegipegi.com</font
+                                                ></a
+                                              >
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="footer" align="center">
+                      <table
+                        class="footer-table"
+                        align="center"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tr>
+                          <td align="center">
+                            <table class="footer-wrapper">
+                              <tr>
+                                <td>
+                                  <img
+                                    src="http://asset.pegipegi.com/image/inbox/download-app.png"
+                                  />
+                                </td>
+                                <td class="footer-content">
+                                  <table
+                                    class="footer-download"
+                                    cellspacing="0"
+                                    cellpadding="0"
+                                  >
+                                    <tr>
+                                      <td class="footer-downloadtitle">
+                                        Download
+                                        <span class="footer-downloadname"
+                                          >Pegipegi</span
+                                        >
+                                        App
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="footer-downloadshare">
+                                        Share your travel experience<br />with
+                                        your friends and family
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <table cellspacing="0" cellpadding="0">
+                                          <tr>
+                                            <td class="footer-download-gplay">
+                                              <a
+                                                href="https://app.appsflyer.com/com.pegipegi.android?utm_source=reviewinvitation&amp;utm_medium=email&amp;uid=*|uid|*"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="http://asset.pegipegi.com/image/inbox/google.png"
+                                                  width="97"
+                                                />
+                                              </a>
+                                            </td>
+                                            <td>
+                                              <a
+                                                href="https://app.appsflyer.com/id1054846518?utm_source=reviewinvitation&amp;utm_medium=email&amp;uid=*|uid|*"
+                                                target="_blank"
+                                              >
+                                                <img
+                                                  src="http://asset.pegipegi.com/image/inbox/apple.png"
+                                                  width="97"
+                                                />
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            colspan="2"
+                            class="confirmation-email"
+                            align="center"
+                          >
+                            Email konfirmasi ini dikirim hanya ke
+                            miranda.pertiwi@gmail.com.<br />Terima kasih telah
+                            memercayakan kami sebagai partner perjalanan
+                            Anda.<br />
+                            <a
+                              href="https://www.pegipegi.com/syarat-ketentuan/"
+                              class="tnc"
+                              >Syarat dan ketentuan</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" align="center">
+                            <table cellspacing="0">
+                              <tr>
+                                <td class="copyright" align="center">
+                                  &copy; 2020 All Rights Reserved | PT Go Online
+                                  Destinations
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="social-media" align="center">
+                      <a href="https://twitter.com/pegipegi" target="_blank">
+                        <img
+                          src="http://asset.pegipegi.com/image/inbox/twitter.png"
+                          width="15"
+                        /> </a
+                      >&nbsp;
+                      <a
+                        href="https://www.facebook.com/Pegipegi"
+                        target="_blank"
+                      >
+                        <img
+                          src="http://asset.pegipegi.com/image/inbox/facebook.png"
+                          width="15"
+                        /> </a
+                      >&nbsp;
+                      <a
+                        href="https://www.youtube.com/channel/UCA3ChmIgUCLEpS8SxFIxK9Q"
+                        target="_blank"
+                      >
+                        <img
+                          src="http://asset.pegipegi.com/image/inbox/youtube.png"
+                          width="15"
+                        /> </a
+                      >&nbsp;
+                      <a
+                        href="https://www.instagram.com/pegi_pegi/"
+                        target="_blank"
+                      >
+                        <img
+                          src="http://asset.pegipegi.com/image/inbox/instagram.png"
+                          width="15"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!--[if mso]>
+            </td>
+          </tr>
+        </table>
+        <![endif]-->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
