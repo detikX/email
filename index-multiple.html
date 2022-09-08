@@ -5,24 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="x-apple-disable-message-reformatting" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <style type="text/css">
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-    body,
-    table,
-    th,
-    td,
-    span,
-    ol,
-    ul,
-    li {
-      font-family: "Montserrat", sans-serif !important;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+      body, table, th, td, span, ol, ul, li {font-family: 'Montserrat', sans-serif !important;
     }
     body {
       font-family: "Montserrat", sans-serif;
@@ -47,9 +36,10 @@
     .container-wrap .container {
       font-family: "Montserrat", sans-serif;
       font-size: 14px;
+      border-radius: 25px;
       background: white;
       padding: 0 16px;
-      background: url(https://i.postimg.cc/zG8DKJSB/background.png);
+      background: url(https://i.postimg.cc/zG8DKJSB/background.png) #f6f6f6;
       background-repeat: no-repeat;
     }
     .header {
@@ -77,21 +67,25 @@
     .content-wrapper .booking-info-table {
       /* border-bottom: 2px solid #e9ebee; */
       /* padding-bottom: 24px; */
+      position: relative;
     }
     .content-wrapper .content-name {
       padding-bottom: 24px;
       background: #f06734;
       color: white;
       padding: 16px;
+      margin: 0 auto;
       /* margin: 0 16px; */
-      position: relative;
-      border-radius: 25px;
-      width: 50%;
+      /* position: absolute; */
+      border-radius: 20px 20px 0 0;
+      width: 90%;
       /* font-weight: 700; */
       /* font-size: 23px; */
       /* line-height: 1.25; */
       letter-spacing: normal;
       z-index: 9;
+      left: 0;
+      right: 0;
     }
     .content-wrapper .content-name .welcome {
       font-size: 28px;
@@ -100,47 +94,54 @@
       margin: 0;
     }
     .content-wrapper .content-name p {
-      font-size: 14px;
+      font-size: 15px;
       margin: 8px 0 0;
+      width: 400px;
+      line-height: 20px;
     }
     .content-wrapper .content-booking {
       padding-bottom: 6px;
       font-weight: 400;
       font-size: 16px;
+      /* position: relative; */
       line-height: 1.75;
-      border-radius: 16px;
+      border-radius: 0 0 20px 20px;
       /* border: 1px solid; */
       background: white;
       z-index: 2;
-      padding: 0 0;
+      /* top: 48px; */
     }
     .content-wrapper .content-booking-note {
       line-height: 1.43;
       color: #898989;
     }
-
+    
     .order-info .order-table {
       /* padding: 8px; */
-      border: 1px solid #d3d3d3;
+      /* border: 1px solid #d3d3d3; */
       margin-bottom: 16px;
-      border-radius: 16px;
+      border-bottom: 1px solid rgba(51, 51, 51, .1);
+      padding-bottom: 16px;
+      /* border-radius: 16px; */
       /* border-bottom: 2px solid #e9ebee; */
     }
     .order-info .order-image {
-      width: 30%;
+      width: 132px;
       vertical-align: top;
-      height: 180px;
+      height: 132px;
       /* padding-right: 16px; */
     }
     .order-info .right-table .order-image img {
-      border-radius: 0 16px 16px 0 !important;
+      /* border-radius: 0 16px 16px 0 !important; */
+      border-radius: 50% !important;
     }
     .order-info .order-image img {
       display: block;
       width: 100%;
       height: 100%;
       /* min-height: 80px; */
-      border-radius: 16px 0 0 16px;
+      /* border-radius: 16px 0 0 16px; */
+      border-radius: 50%;
       /* max-height: 212px; */
       object-fit: cover;
     }
@@ -164,15 +165,15 @@
     .order-info .order-title {
       line-height: normal;
       text-transform: initial;
-      background: #214798;
+      /* background: #214798; */
       border-radius: 0 16px 0 0;
       padding: 8px 16px 0;
-      color: white;
+      color: #333;
     }
     .order-info .order-rating-container {
       padding: 4px 16px 8px;
-      background: #214798;
-      color: white;
+      /* background: #214798; */
+      color: rgba(51, 51, 51, .7);
     }
     .order-info .order-rating-container img {
       vertical-align: middle;
@@ -180,16 +181,16 @@
     .order-info .order-address,
     .order-info .order-phone {
       line-height: 1.5;
-      font-size: 12px;
-      padding: 8px 16px;
+      font-size: 14px;
+      padding: 0px 16px 8px;
     }
     .order-info .order-address p {
       padding: 0;
-      margin: 8px 0;
-      height: 36px;
+      margin: 0px 0 20px;
+      max-height: 90px;
       overflow: hidden;
-      font-size: 12px;
-      color: #666666;
+      font-size: 14px;
+      color: #333;
     }
     .order-info .order-address a {
       text-decoration: none;
@@ -221,7 +222,7 @@
     .content-lock .content-lockbody .content-lockinstruction {
       padding-bottom: 10px;
     }
-
+    
     .detail-info {
       padding-bottom: 7px;
     }
@@ -296,13 +297,23 @@
       border-radius: 4px;
       padding: 10px 20px 20px;
     }
-
+    
     p.large {
-      font-size: 16px;
+      font-size: 15px;
       padding: 4px;
-      color: #000000;
-    }
+      /* margin-top: 60px; */
+      width: 85%;
+      color: #333;
+      /* color: #214798; */
+      line-height: 20px;
+      font-style: italic;
+      margin-bottom: 24px;
+      font-weight: bold;
+      /* border: 1px solid; */
+      /* border-radius: 75px; */
 
+    }
+    
     .additional-table {
       padding-top: 24px;
       padding-bottom: 36px;
@@ -382,6 +393,9 @@
       border-spacing: 0;
       margin: 0 auto;
     }
+    .help-a {
+      margin: 4px 0 8px 8px;
+    }
     .footer-table .footer-wrapper .footer-content {
       padding: 0 0 0 10px;
     }
@@ -443,12 +457,15 @@
       background: #214798;
       color: white;
       font-family: "Montserrat";
-      padding: 4px 8px;
+      padding: 8px 20px;
       border-radius: 16px;
       cursor: pointer;
       outline: 0;
-      font-size: 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
       border-color: transparent;
+      margin: 16px 8px;
     }
     .jobs {
       background: #fccdbb;
@@ -459,8 +476,7 @@
     a {
       text-decoration: none;
     }
-    .jobs h2,
-    .jobs p {
+    .jobs h2, .jobs p{
       text-decoration: none;
       color: black;
       padding: 0;
@@ -498,7 +514,7 @@
     }
     .card-image {
       width: 100%;
-      height: 300px;
+      height: 100%;
     }
     .card-image img {
       width: 100%;
@@ -510,18 +526,23 @@
       padding: 8px;
       font-weight: bold;
     }
-    .help-a {
-      padding: 8px;
-    }
     .card p {
       padding: 0 8px 8px;
       margin: 0;
+      line-height: 22px;
+      font-size: 14px;
+      height: 100px;
+      overflow: hidden;
     }
     .bluee {
       background: #214798 !important;
     }
-  </style>
-  <body style="margin: 0px">
+    .grey {
+      color: #9CA0A8;
+      font-size: 12px;
+    }
+</style>
+<body style="margin: 0px">
     <table width="100%" align="center" cellspacing="0" cellpadding="0">
       <tr>
         <td>
@@ -530,9 +551,9 @@
               <tr>
                 <td>
                   <![endif]-->
-
-          <table
-            class="container-wrap"
+                  
+                  <table
+                  class="container-wrap"
             align="center"
             cellspacing="0"
             cellpadding="0"
@@ -591,14 +612,11 @@
                                           Surat dari Tendean
                                         </h2>
                                         <p>
-                                          Selamat datang di Surat dari Tendean!
-                                          Buletin gratis ini berisi
-                                          informasi-informasi terkini dari HRD
+                                          Selamat datang di Berita dari Tendean! Buletin gratis ini berisi informasi-informasi terkini dari HRD
                                         </p>
                                       </td>
                                     </tr>
 
-                                    <!-- isi content -->
                                     <!-- isi content -->
                                     <tr>
                                       <td
@@ -607,84 +625,92 @@
                                       >
                                         <div>
                                           <p class="large">
-                                            "Lorem ipsum dolor sit amet,
-                                            consectetur adipisicing elit. <br />
-                                            Reprehenderit repellat iusto quidem,
-                                            voluptatem quod veritatis totam
-                                            voluptates cupiditate"
+                                            "Sarapan pakai makaroni, diselingi buah kedondong<br />
+                                            Eh ada anak baru nih, kenalan dong"
                                           </p>
                                         </div>
-                                      </td>
-                                    </tr>
+                                     
 
-                                    <tr>
-                                      <td>
-                                        <!-- job vacancy start -->
-                                        <table
-                                          cellspacing="0"
-                                          cellpadding="0"
-                                          width="100%"
-                                        >
+
+                                        <table>
                                           <tr>
-                                            <td width="50%">
-                                              <div class="card">
-                                                <div class="card-image">
-                                                  <img
-                                                    src="https://i.postimg.cc/RFcpmTkg/Dedi-Arief-Wibisono.jpg"
-                                                    alt=""
-                                                    title=""
-                                                  />
-                                                </div>
-                                                <div class="card-title">
-                                                  Dedi Arief Wibisono
-                                                </div>
-                                                <p>
-                                                  lorem ipsum dolor sit amet
-                                                </p>
-                                                <div class="help-a">
-                                                  <a
-                                                    href="mailto:dedi.wibisono@detik.com"
-                                                    class="btn-link"
-                                                  >
-                                                    Say Hello
-                                                  </a>
-                                                </div>
-                                              </div>
-                                            </td>
-
-                                            <td width="50%">
-                                              <div class="card">
-                                                <div class="card-image">
-                                                  <img
-                                                    src="https://i.postimg.cc/RFcpmTkg/Dedi-Arief-Wibisono.jpg"
-                                                    alt=""
-                                                    title=""
-                                                  />
-                                                </div>
-                                                <div class="card-title">
-                                                  Judul
-                                                </div>
-                                                <p>
-                                                  lorem ipsum dolor sit amet
-                                                </p>
-                                                <div class="help-a">
-                                                  <a
-                                                    href="mailto:dedi.wibisono@detik.com"
-                                                    class="btn-link"
-                                                  >
-                                                    Say Hello
-                                                  </a>
-                                                </div>
-                                              </div>
+                                            <td>
+                                              <!-- job vacancy start -->
+                                              <table
+                                                cellspacing="0"
+                                                cellpadding="0"
+                                                width="100%"
+                                              >
+                                                <tr>
+                                                  <td width="50%">
+                                                    <div class="card">
+                                                      <div class="card-image">
+                                                        <img
+                                                          src="https://i.postimg.cc/RFcpmTkg/Dedi-Arief-Wibisono.jpg"
+                                                          alt=""
+                                                          title=""
+                                                        />
+                                                      </div>
+                                                      <div class="card-title">
+                                                        Dedi Arief Wibisono
+                                                      </div>
+                                                      <p>
+                                                        lorem ipsum dolor sit amet
+                                                      </p>
+                                                      <a
+                                                        href="mailto:dedi.wibisono@detik.com"
+                                                        class=""
+                                                      >
+                                                      <div class="btn-link help-a">
+                                                          Say Hello
+                                                        </div>
+                                                      </a>
+                                                    </div>
+                                                  </td>
+      
+                                                  <td width="50%">
+                                                    <div class="card">
+                                                      <div class="card-image">
+                                                        <img
+                                                          src="https://i.postimg.cc/RFcpmTkg/Dedi-Arief-Wibisono.jpg"
+                                                          alt=""
+                                                          title=""
+                                                        />
+                                                      </div>
+                                                      <div class="card-title">
+                                                        Judul
+                                                      </div>
+                                                      <p>
+                                                        Alika nanti akan membantu tim recruitment untuk kebutuhan user. Walaupun zodiaknya Gemini, tapi pasti dengan senang hati membantu kalian karena Gemini kan terkenal friendly
+                                                      </p>
+                                                      <a
+                                                        href="mailto:dedi.wibisono@detik.com"
+                                                        class=""
+                                                      >
+                                                      <div class="btn-link help-a">
+                                                          Say Hello
+                                                        </div>
+                                                      </a>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                              </table>
                                             </td>
                                           </tr>
                                         </table>
                                       </td>
+
+
+                                     
                                     </tr>
+
+                                   
                                   </table>
                                 </td>
                               </tr>
 
+                             
+                              
                               <!-- Job Opening -->
                               <tr>
                                 <td class="help-info">
@@ -701,7 +727,7 @@
                                         class="help-title"
                                         align="center"
                                       >
-                                        Job Opening
+                                        Info Lowongan
                                       </td>
                                     </tr>
                                     <tr>
@@ -710,8 +736,7 @@
                                         class="help-content"
                                         align="center"
                                       >
-                                        Lorem ipsum dolor, sit amet consectetur
-                                        adipisicing elit. Rem molestias
+                                      Tadi udah kenalan sama anak baru, nah kalau kalian punya kenalan, kenalin juga dong ke HRD-nya detik.
                                       </td>
                                     </tr>
                                     <tr>
@@ -814,6 +839,7 @@
                                         <!-- job vacancy end -->
                                       </td>
                                     </tr>
+                                   
                                   </table>
                                 </td>
                               </tr>
@@ -833,7 +859,7 @@
                                         class="help-title"
                                         align="center"
                                       >
-                                        Kegiatan Warga Detik
+                                      Story anak detik
                                       </td>
                                     </tr>
                                     <tr>
@@ -842,8 +868,7 @@
                                         class="help-content"
                                         align="center"
                                       >
-                                        Lorem ipsum dolor, sit amet consectetur
-                                        adipisicing elit. Rem molestias
+                                      Selain kerja, anak detik suka huru-hara, loh. Yuk intip kegiatan anak detik yang terkini.
                                       </td>
                                     </tr>
                                     <tr>
@@ -862,15 +887,9 @@
                                             <td width="50%">
                                               <div class="card">
                                                 <div class="card-image">
-                                                  <img
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2021/04/15/jeff-smith-1_43.png?w=700&q=90"
-                                                    alt=""
-                                                    title=""
-                                                  />
+                                                  <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/15/jeff-smith-1_43.png?w=700&q=90" alt="" title="">
                                                 </div>
-                                                <div class="card-title">
-                                                  Judul
-                                                </div>
+                                                <div class="card-title">Judul</div>
                                                 <p>
                                                   lorem ipsum dolor sit amet
                                                 </p>
@@ -880,15 +899,9 @@
                                             <td width="50%">
                                               <div class="card">
                                                 <div class="card-image">
-                                                  <img
-                                                    src="https://akcdn.detik.net.id/community/media/visual/2021/04/15/jeff-smith-1_43.png?w=700&q=90"
-                                                    alt=""
-                                                    title=""
-                                                  />
+                                                  <img src="https://akcdn.detik.net.id/community/media/visual/2021/04/15/jeff-smith-1_43.png?w=700&q=90" alt="" title="">
                                                 </div>
-                                                <div class="card-title">
-                                                  Judul
-                                                </div>
+                                                <div class="card-title">Judul</div>
                                                 <p>
                                                   lorem ipsum dolor sit amet
                                                 </p>
@@ -904,9 +917,7 @@
                                                 href="https://www.detik.com/"
                                                 target="_blank"
                                               >
-                                                <button
-                                                  class="button-detik bluee"
-                                                >
+                                                <button class="button-detik bluee">
                                                   Lihat Semua Kegiatan
                                                 </button>
                                               </a>
@@ -916,6 +927,7 @@
                                         <!-- job vacancy end -->
                                       </td>
                                     </tr>
+                                    
                                   </table>
                                 </td>
                               </tr>
@@ -948,10 +960,14 @@
                                   />
                                 </td>
                                 <td>
-                                  <img src="https://i.ibb.co/0YjhwMk/cnn.png" />
+                                  <img
+                                    src="https://i.ibb.co/0YjhwMk/cnn.png"
+                                  />
                                 </td>
                                 <td>
-                                  <img src="https://i.ibb.co/84PhDM4/hai.png" />
+                                  <img
+                                    src="https://i.ibb.co/84PhDM4/hai.png"
+                                  />
                                 </td>
                                 <td>
                                   <img
@@ -978,10 +994,8 @@
                             class="confirmation-email"
                             align="center"
                           >
-                            If you have any questions, feel free message us at
-                            <span class="bold-black">jobs@detik.com</span>. All
-                            right reserved. Update email preferences or
-                            unsubscribe.<br />
+                          If you have any questions, feel free message us at <span class="bold-black">hr@detik.com</span>. All right reserved. Update email preferences or unsubscribe.<br />
+                           
                           </td>
                         </tr>
                         <tr>
@@ -989,9 +1003,9 @@
                             <table cellspacing="0">
                               <tr>
                                 <td class="copyright" align="center">
-                                  Gedung Transmedia Lt. 8, Jl. Kapt. Tendean
-                                  Kav. 12-14A, Mampang Prapatan, Jakarta Selatan
-                                  12790 Telp. 021 - 79187722
+                                  Gedung Transmedia Lt. 8, Jl. Kapt. Tendean Kav. 12-14A, 
+                                  Mampang Prapatan, Jakarta Selatan 12790
+                                  Telp. 021 - 79187722
                                 </td>
                               </tr>
                             </table>
@@ -1000,7 +1014,18 @@
                       </table>
                     </td>
                   </tr>
-                  <tr>
+                  <table align="center">
+                    <tr>
+                      <td>
+                        <a href="#" class="grey">Terms of Use</a>
+                      </td>
+                      <td class="grey">|</td>
+                      <td >
+                        <a href="#" class="grey">Privacy Policy</a>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- <tr>
                     <td class="social-media" align="center">
                       <a href="https://twitter.com/pegipegi" target="_blank">
                         <img
@@ -1036,7 +1061,7 @@
                         />
                       </a>
                     </td>
-                  </tr>
+                  </tr> -->
                 </table>
               </td>
             </tr>
@@ -1051,4 +1076,5 @@
       </tr>
     </table>
   </body>
+
 </html>
